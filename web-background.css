@@ -1,0 +1,439 @@
+/* CSS reset */
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+}
+
+
+/*box model fix here*/
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/* --- body --- */
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    color: black;
+    background-color: #c2946f;
+    background-image: url(images/body_gradient.gif);
+    background-repeat: repeat-x;
+    font-size: 16px;
+}
+
+
+/*---wrapper---*/
+
+div#wrapper {
+    margin: 0 auto;
+    max-width: 960px;
+    box-shadow: 0 0 20px #444;
+}
+
+
+/*--- HEADER ---*/
+
+header {
+    background-color: #ba6537;
+    background-image: url(images/sportballslogo.png);
+    background-repeat: no-repeat;
+    background-position: left 2% top;
+    background-size: 123px;
+}
+
+header h1 {
+    text-align: left;
+    color: rgb(72, 32, 0);
+    padding: 1rem 0 0 2%;
+    margin-left: 125px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+header h1 {
+    font-family: 'Domine', serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+header h2 {
+    text-align: left;
+    color: rgb(72, 32, 0);
+    padding-left: 8%;
+    margin-left: 99px;
+}
+
+header h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 24px;
+}
+
+
+/*--- Navagation --- */
+
+
+/*--- phone nav rules here ---*/
+
+@media only screen and (max-width: 600px) {
+    nav {
+        background-image: url(images/body_gradient.gif);
+        border-top: solid 3px #000;
+        border-bottom: solid 3px #000;
+        padding: .5rem 2%;
+    }
+    nav ul.menu li {
+        background: linear-gradient(to bottom, #804c0d 0%, #d9c0a3 100%);
+        list-style-type: none;
+        width: 13rem;
+        padding: 0;
+        text-align: center;
+        border-radius: 30px;
+        margin: .5rem;
+    }
+    nav ul.menu li a {
+        width: 13rem;
+        border: solid 3px black;
+        display: block;
+        padding: .4rem 2%;
+        margin-bottom: .4rem;
+        border-radius: 30px;
+        color: rgb(154, 31, 0);
+        font-weight: 600;
+        text-decoration: none;
+    }
+    nav ul.menu li.active a {
+        background-color: darkorange;
+        color: darkred;
+    }
+    nav ul.menu li a:hover {
+        background-color: black;
+    }
+    div.keepOpen {
+        clear: both;
+    }
+}
+
+
+/*--- end phone ---*/
+
+
+/*--- desktop nav rules here ---*/
+
+@media only screen and (min-width:601px) {
+    nav {
+        background-color: #d99d55;
+        background: linear-gradient(to bottom, #804c0d 0%, #d9c0a3 100%);
+        border-top: solid 3px #000;
+        border-bottom: solid 3px #000;
+    }
+    nav ul.menu li {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    nav ul.menu li {
+        float: left;
+    }
+    nav ul.menu li a {
+        display: block;
+        padding: .5rem 1.5rem;
+        color: rgb(154, 31, 0);
+        text-decoration: none;
+        border-right: solid 3px black;
+    }
+    nav ul.menu li a:hover {
+        background-color: black;
+    }
+    nav ul.menu li.active a {
+        background-color: darkorange;
+        color: darkred;
+    }
+    div.keepOpen {
+        clear: both;
+    }
+}
+
+
+/*--- end of desktop ---*/
+
+
+/* --- main --- */
+
+main {
+    padding: .50rem 2%;
+    background: linear-gradient(to right, rgb(166, 90, 50) 0%, rgb(229, 125, 69) 100%);
+}
+
+main h1 {
+    font-size: 2rem;
+    color: #18568C;
+    border-bottom: 1px solid lightgreen;
+    margin-bottom: .4rem;
+    text-shadow: 2px 2px 4px #000;
+}
+
+main h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    color: rgb(255, 219, 173);
+    margin-bottom: .4rem;
+}
+
+main h1.banner {
+    list-style-type: none;
+    background-image: url(images/sportsbanner1.gif);
+    background-repeat: no-repeat;
+    background-size: 4rem;
+    padding-left: 4.2rem;
+    margin: 2px;
+}
+
+main p {
+    padding-bottom: .8rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black;
+    line-height: 150%;
+}
+
+main blockquote {
+    font-style: italic;
+    margin: .4rem 2%;
+    font-size: .9rem;
+}
+
+main a {
+    color: darkred;
+}
+
+main a:hover {
+    color: black;
+}
+
+
+/* --- map --- */
+
+iframe.mymap {
+    border: 1px solid #444;
+    width: 95%;
+    margin-left: 2%;
+    height: 500px;
+}
+
+
+/* ---Table--- */
+
+table.schedule {
+    border-collapse: collapse;
+    font-size: .8rem;
+    border: 2px solid #444;
+    margin: 0 1% 1rem 1%;
+}
+
+table.schedule th {
+    text-align: left;
+    background-color: #4c6c73;
+    color: lightgreen;
+    font-size: 1.5rem;
+    padding: .1rem .5rem;
+}
+
+table.schedule td {
+    padding: .5rem;
+}
+
+table.schedule tr:nth-child(odd) {
+    background-color: rgb(255, 219, 173);
+    color: darkgreen;
+}
+
+table.schedule tr:nth-child(even) {
+    background-color: #999;
+    color: ghostwhite;
+}
+
+table.schedule tr:hover {
+    background-color: #444444;
+    color: #dfdfdf;
+}
+
+
+/* ---Video from YOUTUBE--- */
+
+iframe.myvideo {
+    width: 98%;
+    margin-left: 1%;
+    height: 320px;
+    margin-bottom: 1rem;
+}
+
+
+/* --- styling images --- */
+
+figure.myphoto {
+    float: right;
+    background-color: #EEE;
+    margin: 0 0 .25em 2%;
+    padding: .5em;
+    border: 1px solid #4c6c73;
+}
+
+figure.myphoto img {
+    width: 100%;
+}
+
+figure.myphoto figcaption {
+    text-align: center;
+    font-size: .7rem;
+    color: #4c6c73;
+}
+
+figure.photogallery {
+    float: left;
+    background-color: green;
+    margin: 0 0 1em 2%;
+    padding: .5em;
+    border: 2px solid #4c6c73;
+    width: 220px;
+    height: 320px;
+}
+
+figure.photogallery img {
+    width: 100%;
+    height: 62%;
+}
+
+figure.photogallery figcaption {
+    font-size: .7rem;
+    margin: .5rem;
+    color: white;
+}
+
+figure.photogallery figcaption span {
+    display: block;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgb(255, 219, 173);
+}
+
+
+/*--- lists ---*/
+
+main ul.check,
+main ol.bulb {
+    margin: 0 0 .8rem 0;
+    padding: 0 0 0 1rem;
+}
+
+main ul.check {
+    list-style-type: lower-roman;
+}
+
+main ol.dog {
+    list-style-type: lower-roman;
+}
+
+main ul.checklist li {
+    list-style-type: none;
+    background-image: url(images/sportsbanner2.gif);
+    background-repeat: no-repeat;
+    background-size: 2rem;
+    padding-left: 40px;
+    margin: 14px;
+}
+
+main ul.bulb li {
+    list-style-type: none;
+    background-image: url(images/sportsbanner1.gif);
+    background-repeat: repeat-y;
+    background-size: 2rem;
+    padding-left: 40px;
+    margin: 8px;
+}
+
+main dl dt {
+    margin: 0;
+    font-weight: 600;
+    padding: 0 0 0 1rem;
+}
+
+main dl dd {
+    list-style-type: lower-roman;
+    margin: 0;
+    padding: 0 0 .75rem 2rem;
+}
+
+
+/* --- Forms styling --- */
+
+form.sports fieldset {
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    font-size: .8rem;
+    color: black;
+}
+
+form.sports legend {
+    font-weight: 600;
+    margin-left: 1rem;
+}
+
+form.sports span {
+    display: block;
+    padding: .8rem 0 0 .3rem;
+}
+
+form.sports .userinfo {
+    color: black;
+    width: 20rem;
+    border-radius: .6rem;
+    border: solid 1px #cacabb;
+    padding: .4rem;
+}
+
+form.sports .userbutton {
+    width: 10rem;
+    padding: .8rem;
+    margin-left: 2%;
+    border: solid 2px #666;
+    border-radius: .6rem;
+}
+
+form.sports .userbutton {
+    background: darkred;
+    color: beige;
+}
+
+
+/* --- FOOTER --- */
+
+footer {
+    background-color: rgb(61, 32, 0);
+}
+
+footer p {
+    text-align: center;
+    color: #FFDBAD;
+    padding: .5rem;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+footer a {
+    color: red;
+}
+
+footer a:hover {
+    color: darkorange
+}

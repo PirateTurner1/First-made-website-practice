@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="web-background.css" type="text/css">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
+    <title>wturner-exp: main page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, max-scale=1">
+</head>
+
+<body>
+    <div id=w rapper>
+        <!--start of the header-->
+        <header>
+            <h1>Experience The Fun!</h1>
+            <h2>For All Athlectic Dreamers. </h2>
+        </header>
+        <!--start of the navigation-->
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html"> Home</a></li>
+                <li><a href="about.html"> About</a></li>
+                <li><a href="choose-a-sport.html"> Choose a Sport</a></li>
+                <li><a href="sport-gallery.html"> Sport Gallery </a></li>
+                <li><a href="TimesLocations.html"> Times and Locations</a></li>
+                <li class="active"><a href="forms.html"> Sign Up Sheet </a></li>
+            </ul>
+
+            <div class="keepOpen"></div>
+        </nav>
+        <!--start of the content-->
+        <main>
+            <h1 class="banner"> Sign Up Sheet</h1>
+            <p>if you are ready to join in with us to expirience the fun please fill out this form below. </p>
+
+            <form action="FormToEmail.php" method="post" enctype="multipart/form-data" name="attend" class="sports">
+
+                <fieldset>
+                    <legend> Your Name </legend>
+                    <label> <span>First Name:</span> <input name="first" value="" type="text" placeholder="John" required class="userinfo"></label><br>
+                    <label> <span> Last Name:</span> <input name="last" value="" type="text" placeholder="Smith" required class="userinfo"></label>
+                </fieldset>
+
+                <fieldset>
+                    <legend> Contact Information </legend>
+                    <label><span>Email:</span> <input type="email" name="email" value="" placeholder="Email@gmail.com" class="userinfo"> </label><br>
+                    <label> <span>Phone: </span> <input type="tel" name="telephone" value="" placeholder="123-456-7890" required pattern="[0-9-. ]{10,14}" class="userinfo"></label><br>
+                    <label>Age: <input type="number" name="age" value="" class="userinfo"> </label>
+
+                    <span>how would you like us to contact you? </span>
+                    <label> <input type="checkbox" name="telephone" value="telephone" >by phone </label><br>
+                    <label> <input type="checkbox" name="text"  value="text" >texting </label><br>
+                    <label> <input type="checkbox" name="e-mail" value="email"  > email me </label>
+                </fieldset>
+
+
+                <fieldset>
+                    <legend>Registraton Information </legend>
+                    <span>which sport do you want to participate in?</span> <br>
+                    <label> <input type="radio" name="os" value="Basketball">Basketball</label> <br>
+                    <label> <input type="radio" name="os" value="Baseball">Baseball</label> <br>
+                    <label> <input type="radio" name="os" value="Flag Football"> Flag Football</label> <br>
+                    <label> <input type="radio" name="os" value="Soccer"> Soccer</label> <br>
+                    <label> <input type="radio" name="os" value="Golf"> Golf</label> <br>
+                    <label> <input type="radio" name="os" value="Kickball"> Kickball</label> <br>
+
+                    <span> what time frame will be best for you?</span><br>
+                    <label> <input type="checkbox" name="early_morning" value="early_morning"> 9am-10am</label> <br>
+                    <label> <input type="checkbox" name="morning" value="morning"> 10am-11am</label><br>
+                    <label> <input type="checkbox" name="early_afternoon" value="early_afternoon"> 11am-12pm</label> <br>
+                    <label> <input type="checkbox" name="noon" value="noon"> 12pm-1pm</label> <br>
+                    <label> <input type="checkbox" name="afternoon" value="afternoon"> 1pm-2pm</label>
+                </fieldset>
+
+
+
+                <label> <span> Sign-in date: </span> <input type="date" name="date"> </label>
+
+
+                <p>please comment below</p>
+                <textarea name="comments"> </textarea>
+
+
+                <!--- user button may turn out differently --->
+
+                <input type="submit" name="submit" value="signup from website" class="userbutton">
+                <input type="hidden" name="subject" value="signup from website" class="userbutton">
+                <input type="hidden" name="redirect" value="thanks.html">
+
+            </form>
+
+
+        </main>
+
+        <!--start of the footer-->
+        <footer>
+            <p>this website was created to help support others to <b>Experience the Fun</b> through sports. </p>
+
+            <p>This page is &copy;by&#169;ME, &#169;Austin Turner&bull;w@T &bull;&#169;sept. 2018 &bull;created from brackets for web design.</p>
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130167168-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+
+                gtag('config', 'UA-130167168-1');
+            </script>
+        </footer>
+    </div>
+    <!-- end wrapper -->
+</body>
+
+</html>
